@@ -5,53 +5,62 @@ export default defineNuxtConfig({
     compatibilityVersion: 4,
   },
 
-
-  modules: ["nitro-cloudflare-dev", '@nuxt/ui', '@nuxt/content', '@nuxt/image', 'nuxt-studio'],
+  // Removed "nitro-cloudflare-dev" to prevent hook duplication
+  modules: ['@nuxt/ui', '@nuxt/content', '@nuxt/image', 'nuxt-studio'],
 
   studio: {
     repository: {
-      provider: 'github', // 'github' or 'gitlab'
+      provider: 'github',
       owner: 'proudguy69',
       repo: 'proudguy69/eclipsis-hib',
       branch: 'main'
     }
   },
 
-
-  css: ['~/assets/css/main.css'],
-
-  // nitro preset for cloudflare pages
   nitro: {
-    preset: "cloudflare_module",
-
+    preset: "cloudflare_pages",
     cloudflare: {
       deployConfig: true,
-      nodeCompat: true
+      nodeCompat: true // This handles the node:fs/path shims automatically
+    },
+    // Enable WASM if Content or Image needs it for Cloudflare
+    experimental: {
+      wasm: true 
     }
   },
 
-  // @nuxt/image config
+  vite: {
+    build: {
+      rollupOptions: {
+        // Reduced slightly; 20 can sometimes fight for memory with the 
+        // Vite worker-import-meta-url transform seen in your logs
+        maxParallelFileOps: 10 
+      }
+    }
+  },
+
   image: {
-    dir: 'public',
-    quality: 85,
-    format: ['webp', 'jpg'],
+    provider: "cloudflare",
+    cloudflare: {
+      baseURL: 'https://eclipsis-hub.oliver-leander-quinn.workers.dev/' // Replace with your actual URL
+    }
   },
 
-  // nuxt ui theme overrides — component defaults live here
-  ui: {
-    theme: {
-      colors: ['primary', 'secondary'],
-    },
-  },
-
-  // generate routes for content
   content: {
+    database: {
+      type: "d1",
+      bindingName: 'DB'
+    },
     build: {
       markdown: {
         highlight: {
           theme: 'github-dark',
         },
       },
-    },
+    }
   },
+
+  // Keep these for performance
+  telemetry: false,
+  devtools: { enabled: false }
 })
