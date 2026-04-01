@@ -32,7 +32,8 @@ export default defineNuxtConfig({
     repository: {
       provider: 'github',
       owner: 'proudguy69',
-      repo: 'proudguy69/eclipsis-hub'
+      repo: 'eclipsis-hub',
+      branch: 'main'
     },
   },
 
