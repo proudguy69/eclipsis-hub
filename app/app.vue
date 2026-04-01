@@ -6,7 +6,7 @@
 
 <script setup lang="ts">
 // variables
-const base_url = 'https://smp.orangegreencat.com'
+const base_url = 'https://eh.orangegreencat.com'
 const site_name = 'Eclipsis Hub'
 const site_description = 'An independent, community-maintained reference for Eclipsis covering every structure, weapon, mechanic and strategy.'
 

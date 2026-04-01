@@ -16,7 +16,7 @@
       color="neutral"
       variant="outline"
       size="sm"
-      to="https://github.com"
+      to="https://github.com/proudguy69/eclipsis-hub"
       target="_blank"
       rel="noopener"
     />

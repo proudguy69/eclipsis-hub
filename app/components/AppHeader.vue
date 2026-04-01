@@ -25,7 +25,7 @@
     </template>
   </UHeader>
 
-  <!-- search modal placeholder — wire up UModal + queryCollection when ready -->
+  <!-- wire up UModal + queryCollection when ready -->
   <UModal v-model:open="search_open" title="Search">
     <template #body>
       <UInput
