@@ -106,6 +106,11 @@ const contribute_steps = [
     title: 'Open a PR',
     desc: 'Open a pull request and it will be reviewed before going live.',
   },
+  {
+    icon: 'lucide:file-sliders',
+    title: 'Or use the editor',
+    desc: 'Contact the admins for access to a editor built into the sites pages!',
+  }
 ]
 
 // methods
