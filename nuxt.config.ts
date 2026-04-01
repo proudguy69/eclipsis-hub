@@ -18,14 +18,13 @@ export default defineNuxtConfig({
   },
 
   nitro: {
-    preset: "cloudflare_pages",
+    preset: "node-server",
     cloudflare: {
       deployConfig: true,
       nodeCompat: true // This handles the node:fs/path shims automatically
     },
-    // Enable WASM if Content or Image needs it for Cloudflare
-    experimental: {
-      wasm: true 
+    externals: {
+      inline: ['sharp']
     }
   },
 
