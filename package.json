@@ -6,8 +6,10 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "preview": "npm run build && wrangler dev",
+    "postinstall": "nuxt prepare",
+    "deploy": "npm run build && wrangler deploy",
+    "cf-typegen": "wrangler types"
   },
   "dependencies": {
     "@nuxt/content": "^3.4.0",
@@ -19,7 +21,9 @@
   },
   "devDependencies": {
     "@iconify-json/lucide": "^1.2.0",
+    "nitro-cloudflare-dev": "^0.2.2",
     "typescript": "^5.9.3",
-    "vue-tsc": "^3.2.6"
+    "vue-tsc": "^3.2.6",
+    "wrangler": "^4.79.0"
   }
 }
