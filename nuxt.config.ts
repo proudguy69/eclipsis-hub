@@ -1,65 +1,53 @@
 export default defineNuxtConfig({
-  compatibilityDate: '2026-04-01',
+  modules: [
+    '@nuxt/ui',
+    '@nuxt/content',
+    '@nuxt/image',
+    '@nuxthub/core',
+    'nuxt-studio',
+  ],
+  css: ['~/assets/css/main.css'],
 
-  future: {
-    compatibilityVersion: 4,
+  nitro: {
+    compatibilityDate: '2024-11-01',
+    preset: 'cloudflare-pages',
+    cloudflare: {
+      deployConfig: true,
+      nodeCompat: true,
+      wrangler: {
+        name: 'eclipsis-hub',
+        d1_databases: [
+          {
+            binding: 'DB',
+            database_name: 'eclipsis-hub',
+            database_id: 'c26b0566-7c1a-4a5d-b73e-3cd60f88fd84'
+          },
+        ]
+      }
+    },
+
   },
-
-  // Removed "nitro-cloudflare-dev" to prevent hook duplication
-  modules: ['@nuxt/ui', '@nuxt/content', '@nuxt/image', 'nuxt-studio'],
 
   studio: {
     repository: {
       provider: 'github',
       owner: 'proudguy69',
-      repo: 'proudguy69/eclipsis-hib',
-      branch: 'main'
-    }
-  },
-
-  nitro: {
-    preset: "node-server",
-    cloudflare: {
-      deployConfig: true,
-      nodeCompat: true // This handles the node:fs/path shims automatically
+      repo: 'proudguy69/eclipsis-hub'
     },
-    externals: {
-      inline: ['sharp']
-    }
-  },
-
-  vite: {
-    build: {
-      rollupOptions: {
-        // Reduced slightly; 20 can sometimes fight for memory with the 
-        // Vite worker-import-meta-url transform seen in your logs
-        maxParallelFileOps: 10 
-      }
-    }
   },
 
   image: {
     provider: "cloudflare",
     cloudflare: {
-      baseURL: 'https://eclipsis-hub.oliver-leander-quinn.workers.dev/' // Replace with your actual URL
-    }
+      baseURL: "https://eclipsis-hub.oliver-leander-quinn.workers.dev/"
+    },
   },
 
   content: {
     database: {
-      type: "d1",
+      type: 'd1',
       bindingName: 'DB'
-    },
-    build: {
-      markdown: {
-        highlight: {
-          theme: 'github-dark',
-        },
-      },
     }
-  },
-
-  // Keep these for performance
-  telemetry: false,
-  devtools: { enabled: false }
+  }
+  
 })
