@@ -1,10 +1,13 @@
 ---
 title: Condenser
-description: ""
 image: ""
-tags: [Iridium, Extractors]
-seo_title: Condenser — Eclipsis Hub
 seo_description: ""
+seo_title: Condenser — Eclipsis Hub
+tags:
+  - Iridium
+  - Extractors
 ---
 
-Add information about Condenser here.
+# this page will be removed
+
+at some point.. in the future
