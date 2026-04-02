@@ -7,24 +7,25 @@
       }"
     >
       <!-- image -->
-      <div class="aspect-video w-full overflow-hidden border-b border-[#0f1f3d] bg-[#0a1628]">
-        <NuxtImg
-          v-if="image"
-          :src="image"
-          :alt="title"
-          width="400"
-          height="225"
-          fit="cover"
-          class="h-full w-full object-cover"
-          loading="lazy"
-        />
-        <div v-else class="flex h-full w-full flex-col items-center justify-center gap-1.5">
-          <UIcon :name="fallback_icon" class="text-[#2d4a6e] text-2xl" />
-          <span class="font-mono text-[9px] uppercase tracking-widest text-[#2d4a6e]">
-            {{ title.toLowerCase() }}
-          </span>
+      <div class="w-full flex justify-center">
+        <div class="w-[200px] h-[200px] overflow-hidden border-b border-[#0f1f3d] bg-[#0a1628] flex items-center justify-center">
+          <img
+            v-if="image"
+            :src="image"
+            :alt="title"
+            fit="cover"
+            class="h-full w-full object-cover"
+            loading="lazy"
+          />
+          <div v-else class="flex h-full w-full flex-col items-center justify-center gap-1.5">
+            <UIcon :name="fallback_icon" class="text-[#2d4a6e] text-2xl" />
+            <span class="font-mono text-[9px] uppercase tracking-widest text-[#2d4a6e]">
+              {{ title.toLowerCase() }}
+            </span>
+          </div>
         </div>
       </div>
+      
 
       <!-- body -->
       <div class="flex flex-col h-full p-5">
@@ -64,4 +65,5 @@ interface Props {
 const props = withDefaults(defineProps<Props>(), {
   fallback_icon: 'lucide:image',
 })
+
 </script>

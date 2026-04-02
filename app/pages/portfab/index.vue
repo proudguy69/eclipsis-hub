@@ -19,6 +19,7 @@
         :description="cat.description"
         :tags="cat.tags"
         :fallback_icon="cat.icon"
+        :image="cat.image"
       />
     </div>
 
@@ -30,6 +31,8 @@
 const base_url = inject<string>('base_url')
 const site_name = inject<string>('site_name')
 
+
+// i think im gonna have this be set by your mom!
 // variables
 const categories = [
   {
@@ -38,6 +41,7 @@ const categories = [
     description: 'Extraction, transport, storage and processing infrastructure.',
     tags: ['Pipes', 'Extractors', 'Tanks', 'Special'],
     icon: 'lucide:droplets',
+    image: 'https://eh.orangegreencat.com/IridiumIcon.webp'
   },
   {
     to: '/portfab/structures',
@@ -45,6 +49,7 @@ const categories = [
     description: 'Blocks, wedges, walls and defensive structures.',
     tags: ['Basic', 'Defense', 'Seats'],
     icon: 'lucide:box',
+    image: 'https://eh.orangegreencat.com/StructuresIcon.webp'
   },
   {
     to: '/portfab/military',
@@ -52,6 +57,7 @@ const categories = [
     description: 'Turrets, production facilities and combat structures.',
     tags: ['Production', 'Weapons', 'SSIMs', 'Garage'],
     icon: 'lucide:shield',
+    image: 'https://eh.orangegreencat.com/MilitaryIcon.webp'
   },
   {
     to: '/portfab/technology',
@@ -59,6 +65,7 @@ const categories = [
     description: 'Advanced structures, spawn points and more',
     tags: ['Structure Tech', 'Misc', 'Spawn Points'],
     icon: 'lucide:cpu',
+    image: 'https://eh.orangegreencat.com/TechnologyIcon.webp'
   },
 ]
 
