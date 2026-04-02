@@ -5,9 +5,9 @@
       <span class="font-mono text-[11px] uppercase tracking-[0.16em] text-primary-400">Database</span>
       <div class="h-px flex-1 bg-linear-to-r from-[#152848] to-transparent" />
     </div>
-    <h1 class="font-display mb-2 text-[32px] font-bold uppercase tracking-wider text-[#e2f0ff]">Portfab</h1>
+    <h1 class="font-display mb-2 text-[32px] font-bold uppercase tracking-wider text-[#e2f0ff]">Portafab</h1>
     <p class="mb-10 max-w-xl text-[14px] leading-relaxed text-[#6b8fb5]">
-      Every structure buildable from the Portfab, organized by category exactly as the game presents them.
+      Every structure buildable from the Portafab, organized by category exactly as the game presents them.
     </p>
 
     <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -36,7 +36,7 @@ const site_name = inject<string>('site_name')
 // variables
 const categories = [
   {
-    to: '/portfab/iridium',
+    to: '/portafab/iridium',
     title: 'Iridium',
     description: 'Extraction, transport, storage and processing infrastructure.',
     tags: ['Pipes', 'Extractors', 'Tanks', 'Special'],
@@ -44,7 +44,7 @@ const categories = [
     image: 'https://eh.orangegreencat.com//IridiumIcon.webp'
   },
   {
-    to: '/portfab/structures',
+    to: '/portafab/structures',
     title: 'Structures',
     description: 'Blocks, wedges, walls and defensive structures.',
     tags: ['Basic', 'Defense', 'Seats'],
@@ -52,7 +52,7 @@ const categories = [
     image: 'https://eh.orangegreencat.com//StructuresIcon.webp'
   },
   {
-    to: '/portfab/military',
+    to: '/portafab/military',
     title: 'Military',
     description: 'Turrets, production facilities and combat structures.',
     tags: ['Production', 'Weapons', 'SSIMs', 'Garage'],
@@ -60,7 +60,7 @@ const categories = [
     image: 'https://eh.orangegreencat.com//MilitaryIcon.webp'
   },
   {
-    to: '/portfab/technology',
+    to: '/portafab/technology',
     title: 'Technology',
     description: 'Advanced structures, spawn points and more',
     tags: ['Structure Tech', 'Misc', 'Spawn Points'],
@@ -71,11 +71,11 @@ const categories = [
 
 // methods
 useSeoMeta({
-  title: `Portfab — ${site_name}`,
-  ogTitle: `Portfab — ${site_name}`,
-  description: 'Every structure buildable from the Portfab in Eclipsis, organized by category.',
-  ogDescription: 'Every structure buildable from the Portfab in Eclipsis, organized by category.',
-  ogUrl: `${base_url}/portfab`,
+  title: `Portafab — ${site_name}`,
+  ogTitle: `Portafab — ${site_name}`,
+  description: 'Every structure buildable from the Portafab in Eclipsis, organized by category.',
+  ogDescription: 'Every structure buildable from the Portafab in Eclipsis, organized by category.',
+  ogUrl: `${base_url}/portafab`,
   ogImage: `${base_url}/images/og-default.png`,
 })
 </script>

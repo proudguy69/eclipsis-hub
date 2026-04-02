@@ -14,9 +14,9 @@
         </div>
 
         <div>
-          <p class="font-mono mb-3 text-[10px] uppercase tracking-[0.14em] text-[#2d4a6e]">Portfab</p>
+          <p class="font-mono mb-3 text-[10px] uppercase tracking-[0.14em] text-[#2d4a6e]">Portafab</p>
           <ul class="flex flex-col gap-2">
-            <li v-for="link in portfab_links" :key="link.to">
+            <li v-for="link in portafab_links" :key="link.to">
               <NuxtLink :to="link.to" class="text-[13px] text-[#6b8fb5] transition-colors hover:text-[#e2f0ff]">
                 {{ link.label }}
               </NuxtLink>
@@ -65,11 +65,11 @@
 
 <script setup lang="ts">
 // variables
-const portfab_links = [
-  { label: 'Iridium', to: '/portfab/iridium' },
-  { label: 'Structures', to: '/portfab/structures' },
-  { label: 'Military', to: '/portfab/military' },
-  { label: 'Technology', to: '/portfab/technology' },
+const portafab_links = [
+  { label: 'Iridium', to: '/portafab/iridium' },
+  { label: 'Structures', to: '/portafab/structures' },
+  { label: 'Military', to: '/portafab/military' },
+  { label: 'Technology', to: '/portafab/technology' },
 ]
 
 const content_links = [

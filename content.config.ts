@@ -10,7 +10,7 @@ const author_schema = z.object({
 export default defineContentConfig({
   collections: {
 
-    portfab: defineCollection({
+    portafab: defineCollection({
       type: 'page',
       source: 'portafab/**/*.md',
       schema: z.object({

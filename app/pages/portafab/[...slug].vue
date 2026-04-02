@@ -105,11 +105,12 @@ const base_url = inject<string>('base_url')
 const site_name = inject<string>('site_name')
 
 // refs
-const { data: page } = await useAsyncData(`portfab-${content_path}`, () => 
+const { data: page } = await useAsyncData(`portafab-${content_path}`, () => 
   queryCollection('portafab').path(content_path).first()
 )
 
-const { data: children } = await useAsyncData(`portfab-children-${content_path}`,() => 
+
+const { data: children } = await useAsyncData(`portafab-children-${content_path}`,() => 
   queryCollection('portafab').where('path', 'LIKE', `${content_path}/%`).all()
 )
 
@@ -130,12 +131,12 @@ const is_category = computed(() => !!direct_children.value?.length)
 
 const breadcrumb_label = computed(() => {
   const parts = slug.value
-  return parts[parts.length - 2] ?? 'Portfab'
+  return parts[parts.length - 2] ?? 'Portafab'
 })
 
 const breadcrumb_items = computed(() => {
-  const items = [{ label: 'Portfab', to: '/portfab' }]
-  let path = '/portfab'
+  const items = [{ label: 'Portafab', to: '/portafab' }]
+  let path = '/portafab'
   slug.value.forEach((part, i) => {
     path += `/${part}`
     items.push({

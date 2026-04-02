@@ -49,24 +49,25 @@
       <USeparator />
     </div>
 
-    <!-- portfab -->
+    <!-- portafab -->
     <section class="mx-auto max-w-[1180px] px-6 py-16">
       <div class="mb-2 flex items-center gap-3">
-        <span class="font-mono text-[11px] uppercase tracking-[0.16em] text-primary-400">Portfab Reference</span>
+        <span class="font-mono text-[11px] uppercase tracking-[0.16em] text-primary-400">Portafab Reference</span>
         <div class="h-px flex-1 bg-gradient-to-r from-[#152848] to-transparent" />
       </div>
       <h2 class="font-display mb-2 text-[26px] font-bold uppercase tracking-wider text-[#e2f0ff]">Build Database</h2>
-      <p class="mb-8 text-[14px] text-[#6b8fb5]">Every structure available in the Portfab, organized exactly as it appears in game.</p>
+      <p class="mb-8 text-[14px] text-[#6b8fb5]">Every structure available in the Portafab, organized exactly as it appears in game.</p>
 
       <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
         <ItemCard
-          v-for="cat in portfab_categories"
+          v-for="cat in portafab_categories"
           :key="cat.to"
           :to="cat.to"
           :title="cat.title"
           :description="cat.description"
           :tags="cat.tags"
           :fallback_icon="cat.icon"
+          :image="cat.image"
         />
       </div>
     </section>
@@ -190,34 +191,38 @@ const base_url = inject<string>('base_url')
 const site_description = inject<string>('site_description')
 
 // variables
-const portfab_categories = [
+const portafab_categories = [
   {
-    to: '/portfab/iridium',
+    to: '/portafab/iridium',
     title: 'Iridium',
     description: 'Extraction, transport, storage and processing infrastructure for your Iridium supply.',
     tags: ['Pipes', 'Extractors', 'Tanks', 'Special'],
     icon: 'lucide:droplets',
+    image: '/IridiumIcon.webp'
   },
   {
-    to: '/portfab/structures',
+    to: '/portafab/structures',
     title: 'Structures',
     description: 'Blocks, wedges, walls and defensive structures for building your base.',
     tags: ['Basic', 'Defense', 'Seats'],
     icon: 'lucide:box',
+    image: '/StructuresIcon.webp'
   },
   {
-    to: '/portfab/military',
+    to: '/portafab/military',
     title: 'Military',
     description: 'Turrets, production facilities and combat structures for offensive and defensive play.',
     tags: ['Production', 'Weapons', 'SSIMs', 'Garage'],
     icon: 'lucide:shield',
+    image: '/MilitaryIcon.webp'
   },
   {
-    to: '/portfab/technology',
+    to: '/portafab/technology',
     title: 'Technology',
     description: 'Advanced structures including spawn points, fabricators and special support systems.',
     tags: ['Structure Tech', 'Misc', 'Spawn Points'],
     icon: 'lucide:cpu',
+    image: '/TechnologyIcon.webp'
   },
 ]
 
