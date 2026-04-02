@@ -20,9 +20,9 @@
       <h1 class="font-display mb-2 text-[32px] font-bold uppercase tracking-wider text-[#e2f0ff]">{{ page.title }}</h1>
       <p v-if="page.description" class="mb-10 max-w-xl text-[14px] leading-relaxed text-[#6b8fb5]">{{ page.description }}</p>
 
-      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <ItemCard
-          v-for="child in children"
+          v-for="child in direct_children"
           :key="child.path"
           :to="child.path"
           :title="child.title"
@@ -99,24 +99,34 @@
 // variables
 const route = useRoute()
 const slug = computed(() => Array.isArray(route.params.slug) ? route.params.slug : [route.params.slug])
-const content_path = computed(() => `/portfab/${slug.value.join('/')}`)
+const content_path = `/portfab/${slug.value.join('/')}` // # /portfab/iridium for example
 
 const base_url = inject<string>('base_url')
 const site_name = inject<string>('site_name')
 
 // refs
-const { data: page } = await useAsyncData(
-  `portfab-${content_path.value}`,
-  () => queryCollection('portfab').path(content_path.value).first()
+const { data: page } = await useAsyncData(`portfab-${content_path}`, () => 
+  queryCollection('portfab').path(content_path).first()
 )
 
-const { data: children } = await useAsyncData(
-  `portfab-children-${content_path.value}`,
-  () => queryCollection('portfab').where('path', 'LIKE', `${content_path.value}/%`).all()
+const { data: children } = await useAsyncData(`portfab-children-${content_path}`,() => 
+  queryCollection('portfab').where('path', 'LIKE', `${content_path}/%`).all()
 )
+
+const direct_children = computed(() => {
+  if (!children.value) return []
+  return children.value.filter(item => {
+    const remainder = item.path.slice(content_path.length + 1)
+    return !remainder.includes('/')
+  })
+})
+
+
+
+console.log(direct_children.value)
 
 // computed
-const is_category = computed(() => !!children.value?.length)
+const is_category = computed(() => !!direct_children.value?.length)
 
 const breadcrumb_label = computed(() => {
   const parts = slug.value
@@ -129,7 +139,9 @@ const breadcrumb_items = computed(() => {
   slug.value.forEach((part, i) => {
     path += `/${part}`
     items.push({
+      // @ts-ignore
       label: part.charAt(0).toUpperCase() + part.slice(1).replace(/-/g, ' '),
+      // @ts-ignore
       to: i < slug.value.length - 1 ? path : undefined,
     })
   })
@@ -142,7 +154,7 @@ useSeoMeta({
   ogTitle: page.value?.seo_title ?? page.value?.title,
   description: page.value?.seo_description ?? page.value?.description,
   ogDescription: page.value?.seo_description ?? page.value?.description,
-  ogUrl: `${base_url}${content_path.value}`,
+  ogUrl: `${base_url}${content_path}`,
   ogImage: page.value?.seo_image ?? page.value?.image ?? `${base_url}/images/og-default.png`,
 })
 </script>

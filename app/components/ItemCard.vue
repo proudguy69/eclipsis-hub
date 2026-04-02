@@ -27,11 +27,11 @@
       </div>
 
       <!-- body -->
-      <div class="p-5">
+      <div class="flex flex-col h-full p-5">
         <p class="font-display mb-1.5 text-[15px] font-bold uppercase tracking-wider text-[#e2f0ff]">
           {{ title }}
         </p>
-        <p v-if="description" class="mb-4 text-[12px] leading-relaxed text-[#6b8fb5]">
+        <p v-if="description" class="flex-1 mb-4 text-[12px] leading-relaxed text-[#6b8fb5]">
           {{ description }}
         </p>
         <div v-if="tags?.length" class="flex flex-wrap gap-1.5">

@@ -1,10 +1,12 @@
 ---
 title: Special
-description: "Caps, refill stations, valves and tech structures."
+description: Caps, refill stations, valves and tech structures.
 image: ""
-tags: [Iridium, Special]
-seo_title: Special — Eclipsis Hub
 seo_description: ""
+seo_title: Special — Eclipsis Hub
+tags:
+  - Iridium
+  - Special
 ---
 
 Special purpose Iridium structures.
