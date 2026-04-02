@@ -25,9 +25,9 @@
 
           <div class="flex flex-wrap items-center gap-2.5">
             <UButton
-              label="Browse Portfab"
+              label="Browse Portafab"
               icon="lucide:layers"
-              to="/portfab"
+              to="/portafab"
               color="primary"
               size="md"
             />

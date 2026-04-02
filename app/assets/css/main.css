@@ -35,6 +35,11 @@
   --font-mono:    'Share Tech Mono', monospace;
 }
 
+:root {
+  --ui-primary: var(--color-secondary-500);
+  --ui-secondary: var(--color-primary-500);
+}
+
 
 /* base */
 html {
