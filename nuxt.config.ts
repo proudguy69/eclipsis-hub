@@ -17,9 +17,9 @@ export default defineNuxtConfig({
         name: 'eclipsis-hub',
         d1_databases: [
           {
-            binding: 'DB',
+            binding: 'eclipsis_hub',
             database_name: 'eclipsis-hub',
-            database_id: 'c26b0566-7c1a-4a5d-b73e-3cd60f88fd84'
+            database_id: 'd5a90be2-6ecd-45fd-936f-88082d131a96'
           },
         ]
       }
@@ -46,7 +46,7 @@ export default defineNuxtConfig({
   content: {
     database: {
       type: 'd1',
-      bindingName: 'DB'
+      bindingName: 'eclipsis_hub'
     }
   },
 
