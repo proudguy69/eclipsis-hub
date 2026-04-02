@@ -3,8 +3,7 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxt/content',
     '@nuxt/image',
-    '@nuxthub/core',
-    'nuxt-studio',
+    'nuxt-studio'
   ],
   css: ['~/assets/css/main.css'],
 
@@ -12,7 +11,7 @@ export default defineNuxtConfig({
     compatibilityDate: '2024-11-01',
     preset: 'cloudflare-pages',
     cloudflare: {
-      deployConfig: true,
+      deployConfig: false,
       nodeCompat: true,
       wrangler: {
         name: 'eclipsis-hub',
@@ -49,6 +48,12 @@ export default defineNuxtConfig({
     database: {
       type: 'd1',
       bindingName: 'ECLIPSIS_DB'
+    }
+  },
+
+  app: {
+    head: {
+      link: [{rel: 'icon', type: 'image/x-icon', 'href': '/favicon.ico  '}]
     }
   }
   
