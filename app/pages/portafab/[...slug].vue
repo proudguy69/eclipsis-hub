@@ -111,7 +111,7 @@ const { data: page } = await useAsyncData(`portafab-${content_path}`, () =>
 
 
 const { data: children } = await useAsyncData(`portafab-children-${content_path}`,() => 
-  queryCollection('portafab').where('path', 'LIKE', `${content_path}/%`).all()
+  queryCollection('portafab').where('path', 'LIKE', `${content_path}/%`).order('order', 'ASC').all()
 )
 
 const direct_children = computed(() => {
@@ -122,9 +122,6 @@ const direct_children = computed(() => {
   })
 })
 
-
-
-console.log(direct_children.value)
 
 // computed
 const is_category = computed(() => !!direct_children.value?.length)
