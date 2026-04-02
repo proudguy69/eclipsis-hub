@@ -9,9 +9,9 @@ export default defineNuxtConfig({
 
   nitro: {
     compatibilityDate: '2024-11-01',
-    preset: 'cloudflare-pages',
+    preset: 'cloudflare_pages',
     cloudflare: {
-      deployConfig: false,
+      deployConfig: true,
       nodeCompat: true,
       wrangler: {
         name: 'eclipsis-hub',
@@ -21,8 +21,7 @@ export default defineNuxtConfig({
             database_name: 'eclipsis-hub',
             database_id: 'c26b0566-7c1a-4a5d-b73e-3cd60f88fd84'
           },
-        ],
-        pages_build_output_dir: './dist'
+        ]
       }
     },
 
@@ -47,7 +46,7 @@ export default defineNuxtConfig({
   content: {
     database: {
       type: 'd1',
-      bindingName: 'ECLIPSIS_DB'
+      bindingName: 'DB'
     }
   },
 
