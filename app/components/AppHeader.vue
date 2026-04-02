@@ -47,7 +47,7 @@ const search_query = ref('')
 
 // variables
 const nav_items = [
-  { label: 'Portfab', icon: 'lucide:layers', to: '/portfab' },
+  { label: 'Portafab', icon: 'lucide:layers', to: '/portafab' },
   { label: 'Weapons', icon: 'lucide:crosshair', to: '/weapons' },
   { label: 'Mechanics', icon: 'lucide:compass', to: '/mechanics' },
   { label: 'Guides', icon: 'lucide:book-open', to: '/guides' },
