@@ -21,6 +21,11 @@ export default defineNuxtConfig({
             database_name: 'eclipsis-hub',
             database_id: 'd5a90be2-6ecd-45fd-936f-88082d131a96'
           },
+          {
+            binding: 'DB',
+            database_name: 'eclipsis-hub',
+            database_id: 'd5a90be2-6ecd-45fd-936f-88082d131a96'
+          }
         ]
       }
     },
