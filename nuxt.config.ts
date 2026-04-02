@@ -8,7 +8,7 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
 
   nitro: {
-    compatibilityDate: '2024-11-01',
+    compatibilityDate: '2026-04-02',
     preset: 'cloudflare_pages',
     cloudflare: {
       deployConfig: true,
