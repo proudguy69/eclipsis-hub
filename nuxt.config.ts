@@ -22,7 +22,8 @@ export default defineNuxtConfig({
             database_name: 'eclipsis-hub',
             database_id: 'c26b0566-7c1a-4a5d-b73e-3cd60f88fd84'
           },
-        ]
+        ],
+        pages_build_output_dir: './dist'
       }
     },
 
