@@ -20,11 +20,6 @@ export default defineNuxtConfig({
             binding: 'eclipsis_hub',
             database_name: 'eclipsis-hub',
             database_id: 'd5a90be2-6ecd-45fd-936f-88082d131a96'
-          },
-          {
-            binding: 'DB',
-            database_name: 'eclipsis-studio',
-            database_id: '0196e8b2-fc3f-40de-844f-f4c2203a45b3'
           }
         ]
       }
