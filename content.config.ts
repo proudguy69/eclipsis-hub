@@ -18,6 +18,7 @@ export default defineContentConfig({
         description: z.string().optional(),
         image: z.string().optional(),
         tags: z.array(z.string()).optional(),
+        authors: z.object(author_schema).optional()
         seo_title: z.string().optional(),
         seo_description: z.string().optional(),
         seo_image: z.string().optional(),
