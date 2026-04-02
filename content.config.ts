@@ -12,7 +12,7 @@ export default defineContentConfig({
 
     portfab: defineCollection({
       type: 'page',
-      source: 'portfab/**/*.md',
+      source: 'portafab/**/*.md',
       schema: z.object({
         title: z.string(),
         description: z.string().optional(),

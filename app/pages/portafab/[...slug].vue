@@ -99,18 +99,18 @@
 // variables
 const route = useRoute()
 const slug = computed(() => Array.isArray(route.params.slug) ? route.params.slug : [route.params.slug])
-const content_path = `/portfab/${slug.value.join('/')}` // # /portfab/iridium for example
+const content_path = `/portafab/${slug.value.join('/')}` // # /portafab/iridium for example
 
 const base_url = inject<string>('base_url')
 const site_name = inject<string>('site_name')
 
 // refs
 const { data: page } = await useAsyncData(`portfab-${content_path}`, () => 
-  queryCollection('portfab').path(content_path).first()
+  queryCollection('portafab').path(content_path).first()
 )
 
 const { data: children } = await useAsyncData(`portfab-children-${content_path}`,() => 
-  queryCollection('portfab').where('path', 'LIKE', `${content_path}/%`).all()
+  queryCollection('portafab').where('path', 'LIKE', `${content_path}/%`).all()
 )
 
 const direct_children = computed(() => {
