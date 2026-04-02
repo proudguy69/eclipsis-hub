@@ -40,7 +40,7 @@ export default defineNuxtConfig({
   image: {
     provider: "cloudflare",
     cloudflare: {
-      baseURL: "https://eclipsis-hub.oliver-leander-quinn.workers.dev/"
+      baseURL: "https://eh.orangegreencat.com/"
     },
   },
 

@@ -41,7 +41,7 @@ const categories = [
     description: 'Extraction, transport, storage and processing infrastructure.',
     tags: ['Pipes', 'Extractors', 'Tanks', 'Special'],
     icon: 'lucide:droplets',
-    image: 'https://eh.orangegreencat.com/IridiumIcon.webp'
+    image: 'https://eh.orangegreencat.com//IridiumIcon.webp'
   },
   {
     to: '/portfab/structures',
@@ -49,7 +49,7 @@ const categories = [
     description: 'Blocks, wedges, walls and defensive structures.',
     tags: ['Basic', 'Defense', 'Seats'],
     icon: 'lucide:box',
-    image: 'https://eh.orangegreencat.com/StructuresIcon.webp'
+    image: 'https://eh.orangegreencat.com//StructuresIcon.webp'
   },
   {
     to: '/portfab/military',
@@ -57,7 +57,7 @@ const categories = [
     description: 'Turrets, production facilities and combat structures.',
     tags: ['Production', 'Weapons', 'SSIMs', 'Garage'],
     icon: 'lucide:shield',
-    image: 'https://eh.orangegreencat.com/MilitaryIcon.webp'
+    image: 'https://eh.orangegreencat.com//MilitaryIcon.webp'
   },
   {
     to: '/portfab/technology',
@@ -65,7 +65,7 @@ const categories = [
     description: 'Advanced structures, spawn points and more',
     tags: ['Structure Tech', 'Misc', 'Spawn Points'],
     icon: 'lucide:cpu',
-    image: 'https://eh.orangegreencat.com/TechnologyIcon.webp'
+    image: 'https://eh.orangegreencat.com//TechnologyIcon.webp'
   },
 ]
 
