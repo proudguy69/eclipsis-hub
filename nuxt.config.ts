@@ -36,13 +36,6 @@ export default defineNuxtConfig({
     },
   },
 
-  image: {
-    provider: "cloudflare",
-    cloudflare: {
-      baseURL: "https://eh.orangegreencat.com/"
-    },
-  },
-
   content: {
     database: {
       type: 'd1',
