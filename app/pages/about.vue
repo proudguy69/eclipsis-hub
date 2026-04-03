@@ -1,9 +1,9 @@
 <template>
-  <div class="mx-auto max-w-[860px] px-6 py-16">
+  <div class="mx-auto max-w-215 px-6 py-16">
 
     <div class="mb-2 flex items-center gap-3">
       <span class="font-mono text-[11px] uppercase tracking-[0.16em] text-primary-400">Site</span>
-      <div class="h-px flex-1 bg-gradient-to-r from-[#152848] to-transparent" />
+      <div class="h-px flex-1 bg-linear-to-r from-[#152848] to-transparent" />
     </div>
     <h1 class="font-display mb-10 text-[32px] font-bold uppercase tracking-wider text-[#e2f0ff]">About Eclipsis Hub</h1>
 
@@ -79,6 +79,19 @@
         Contributors will be listed here once the site has content. If you submit a guide or page, add yourself to
         the contributors list in the GitHub repository.
       </p>
+      <USeparator class="my-3" />
+      <div class="flex flex-row flex-wrap justify-center gap-2">
+        <UUser
+        class="border-secondary-900/40 bg-secondary-950/50 rounded-md p-1 border"
+        v-for="contributer in contributers"
+        :name="contributer.Name"
+        :description="contributer.Username"
+        :avatar="{
+          src:contributer.Avatar,
+          icon:'i-lucide-image'
+        }"
+        />
+      </div>
     </div>
 
   </div>
@@ -111,6 +124,19 @@ const contribute_steps = [
     title: 'Or use the editor',
     desc: 'Contact the admins for access to a editor built into the sites pages!',
   }
+]
+
+const contributers = [
+  {
+    Name: 'Paul',
+    Username: '@orangegreencat',
+    Avatar: '/pfps/ownerpfp.jpg'
+  },
+  {
+    Name: 'Kop',
+    Username: '@kopsenterpize',
+    Avatar: '/pfps/kopsenterprize.webp'
+  },
 ]
 
 // methods

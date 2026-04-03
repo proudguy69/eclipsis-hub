@@ -29,9 +29,13 @@ data:
 The Pipe is a structure which connects pipe openings and iridium-powered machines to form an iridium network, allowing iridium to run from one place to another. As Pipes only have 2 entrances, the T-Junction and the Four-Way must be used to connect more than 2 structures to an iridium network.
 
 ---
+
 ## Stratagies
+
 No stratagies listed/created for this item
 
 ---
+
 ## History
+
 No history listed for this item
