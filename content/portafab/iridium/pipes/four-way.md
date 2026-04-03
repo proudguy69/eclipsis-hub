@@ -1,6 +1,7 @@
 ---
 title: Four Way
-image: ""
+description: Add information about Four Way here.
+image: /portafab/fourwayicon.webp
 order: 3
 seo_description: ""
 seo_title: Four Way — Eclipsis Hub
