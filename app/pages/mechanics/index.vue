@@ -1,9 +1,9 @@
 <template>
-  <div class="mx-auto max-w-[1180px] px-6 py-16">
+  <div class="mx-auto max-w-295 px-6 py-16">
 
     <div class="mb-2 flex items-center gap-3">
       <span class="font-mono text-[11px] uppercase tracking-[0.16em] text-primary-400">Gameplay</span>
-      <div class="h-px flex-1 bg-gradient-to-r from-[#152848] to-transparent" />
+      <div class="h-px flex-1 bg-linear-to-r from-[#152848] to-transparent" />
     </div>
     <h1 class="font-display mb-2 text-[32px] font-bold uppercase tracking-wider text-[#e2f0ff]">Mechanics and Strategies</h1>
     <p class="mb-10 max-w-xl text-[14px] leading-relaxed text-[#6b8fb5]">
