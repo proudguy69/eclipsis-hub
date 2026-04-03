@@ -32,7 +32,7 @@ export default defineNuxtConfig({
       provider: 'github',
       owner: 'proudguy69',
       repo: 'eclipsis-hub',
-      branch: 'main'
+      branch: 'studio'
     },
   },
 
