@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto max-w-[1180px] px-6 py-16">
+  <div class="mx-auto max-w-295 px-6 py-16">
 
     <UBreadcrumb :items="[{ label: 'Guides', to: '/guides' }, { label: page?.title ?? slug }]" class="mb-8" />
 
@@ -20,10 +20,10 @@
               :label="page.difficulty"
               color="secondary"
               variant="subtle"
-              size="xs"
+              size="sm"
               class="capitalize"
             />
-            <div class="h-px flex-1 bg-gradient-to-r from-[#152848] to-transparent" />
+            <div class="h-px flex-1 bg-linear-to-r from-[#152848] to-transparent" />
           </div>
           <h1 class="font-display mb-4 text-[32px] font-bold uppercase tracking-wider text-[#e2f0ff]">{{ page.title }}</h1>
 
@@ -36,8 +36,8 @@
             >
               <UAvatar :src="author.avatar" :alt="author.name" size="sm" />
               <div>
-                <p class="text-[13px] text-[#e2f0ff]">{{ author.name }}</p>
-                <p class="font-mono text-[10px] text-[#2d4a6e]">@{{ author.username }}</p>
+                <p class="text-[16px] text-secondary-200">{{ author.name }}</p>
+                <p class="font-mono text-[13px] text-secondary-500">@{{ author.username }}</p>
               </div>
             </div>
             <div v-if="page.date" class="ml-auto">
