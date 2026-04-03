@@ -45,7 +45,7 @@
           </div>
           <h1 class="font-display mb-6 text-[32px] font-bold uppercase tracking-wider text-[#e2f0ff]">{{ page.title }}</h1>
 
-          <NuxtImg
+          <!-- <NuxtImg
             v-if="page.image"
             :src="page.image"
             :alt="page.title"
@@ -54,7 +54,7 @@
             fit="cover"
             class="mb-8 w-full rounded-xl border border-[#0f1f3d] object-cover"
             loading="lazy"
-          />
+          /> -->
 
           <div class="prose-eclipsis">
             <ContentRenderer :value="page" />

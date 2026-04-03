@@ -14,20 +14,23 @@
 
     <UNavigationMenu :items="nav_items" />
 
+    <template #body>
+      <UNavigationMenu :items="nav_items" orientation="vertical" />
+    </template>
+
     <template #right>
-      <UButton
-        icon="lucide:search"
-        color="neutral"
-        variant="ghost"
-        size="sm"
-        aria-label="Search"
-        @click="search_open = true"
+      <UContentSearchButton />
+      <UContentSearch 
+      v-model:search-term="search_term"
+      :files="files"
+      :navigation="navigation"
+      :fuse="{resultLimit: 42}"
       />
     </template>
   </UHeader>
 
-  <!-- wire up UModal + queryCollection when ready -->
-  <UModal v-model:open="search_open" title="Search">
+  <!-- nuxt content has its own search -->
+  <!-- <UModal v-model:open="search_open" title="Search">
     <template #body>
       <UInput
         v-model="search_query"
@@ -37,15 +40,31 @@
       />
       <p class="mt-4 text-sm text-[#2d4a6e]">Search coming soon.</p>
     </template>
-  </UModal>
+  </UModal> -->
 </template>
 
 <script setup lang="ts">
+
 // refs
-const search_open = ref(false)
-const search_query = ref('')
+const search_term = ref('')
 
 // variables
+const { data: navigation } = await useAsyncData('navigation', () => 
+  Promise.all([
+    queryCollectionNavigation('portafab'),
+    queryCollectionNavigation('guides'),
+    queryCollectionNavigation('mechanics'),
+  ]).then(results => results.flat())
+)
+
+const { data: files } = await useAsyncData('search', () => 
+  Promise.all([
+    queryCollectionSearchSections('portafab'),
+    queryCollectionSearchSections('guides'),
+    queryCollectionSearchSections('mechanics'),
+  ]).then(results => results.flat())
+)
+
 const nav_items = [
   { label: 'Portafab', icon: 'lucide:layers', to: '/portafab' },
   { label: 'Weapons', icon: 'lucide:crosshair', to: '/weapons' },

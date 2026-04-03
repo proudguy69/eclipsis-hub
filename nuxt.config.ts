@@ -40,6 +40,11 @@ export default defineNuxtConfig({
     database: {
       type: 'd1',
       bindingName: 'eclipsis_hub'
+    },
+    build: {
+      markdown: {
+        contentHeading: false
+      }
     }
   },
 
