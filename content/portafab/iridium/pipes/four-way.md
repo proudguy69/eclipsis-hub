@@ -1,10 +1,14 @@
 ---
 title: Four Way
-description: ""
 image: ""
-tags: [Iridium, Pipes]
-seo_title: Four Way — Eclipsis Hub
+order: 3
 seo_description: ""
+seo_title: Four Way — Eclipsis Hub
+tags:
+  - Iridium
+  - Pipes
 ---
 
 Add information about Four Way here.
+
+set to order 3
