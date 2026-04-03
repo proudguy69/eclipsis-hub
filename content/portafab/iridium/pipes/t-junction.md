@@ -1,6 +1,7 @@
 ---
 title: T Junction
-image: ""
+description: Add information about T Junction here.
+image: /portafab/tjunctionicon.webp
 order: 2
 seo_description: ""
 seo_title: T Junction — Eclipsis Hub
