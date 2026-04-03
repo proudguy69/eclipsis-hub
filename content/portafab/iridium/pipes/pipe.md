@@ -1,10 +1,14 @@
 ---
 title: Pipe
-description: ""
 image: ""
-tags: [Iridium, Pipes]
-seo_title: Pipe — Eclipsis Hub
+order: 1
 seo_description: ""
+seo_title: Pipe — Eclipsis Hub
+tags:
+  - Iridium
+  - Pipes
 ---
 
 Add information about Pipe here.
+
+set to order 1
