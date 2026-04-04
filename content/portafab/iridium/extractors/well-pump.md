@@ -5,7 +5,7 @@ order: 1
 seo:
   title: Eclipsis Hub - Well Pump
   description: The Well Pump is an Extractor that pumps iridium from the Iridium Ocean through a Well Pipe at a rate of 10 iridium per second.
-seo_description: "The Well Pump is an Extractor that pumps iridium from the Iridium Ocean through a Well Pipe at a rate of 10 iridium per second."
+seo_description: The Well Pump is an Extractor that pumps iridium from the Iridium Ocean through a Well Pipe at a rate of 10 iridium per second.
 seo_title: Eclipsis Hub - Well Pump
 tags:
   - Iridium
@@ -42,6 +42,6 @@ Well Pumps are highly efficient for iridium production throughout all stages of 
 ## History
 
 - **2024-12-26** — Well Pumps have been altered to produce 10i/s natively and the third upgrade has been removed. The environment has changed with new islands, optimized structures, and the introduction of the Pressurizer.
-- **2025-01-02** — Pressurizer iridium bonus per pump increased from 5ir/s to 10ir/s. Found even more pressurizer ports! Port range increased from [1, 2] to [2, 3].
+- **2025-01-02** — Pressurizer iridium bonus per pump increased from 5ir/s to 10ir/s. Found even more pressurizer ports! Port range increased from \[1, 2] to \[2, 3].
 - **2025-09-13** — Added alt menu display info for the pressurizer.
 - **2026-03-18** — Fixed a sandbox loading error when migrating an older save to the current game version.

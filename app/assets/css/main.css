@@ -81,7 +81,8 @@ body {
   color: #e2f0ff;
 }
 .prose-eclipsis a {
-  color: #0ea5e9;
+  /* color: #0ea5e9; */
+  color: var(--color-secondary-500);
   text-decoration: none;
 }
 .prose-eclipsis a:hover {
