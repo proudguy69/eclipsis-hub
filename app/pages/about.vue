@@ -122,7 +122,7 @@ const contribute_steps = [
   {
     icon: 'lucide:file-sliders',
     title: 'Or use the editor',
-    desc: 'Contact the admins for access to a editor built into the sites pages!',
+    desc: 'See out contributing guide on the guides page to learn more!',
   }
 ]
 

@@ -2,8 +2,8 @@
   <div>
     <!-- hero -->
     <section class="relative flex min-h-[80vh] items-center px-6 pb-16 pt-24">
-      <div class="mx-auto w-full max-w-[1180px]">
-        <div class="max-w-[600px]">
+      <div class="mx-auto w-full max-w-295">
+        <div class="max-w-150">
 
           <div class="mb-7 inline-flex items-center gap-2 rounded-full border border-primary-900/40 bg-primary-950/30 px-3 py-1.5">
             <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-primary-400" />
@@ -19,7 +19,7 @@
             </span>
           </h1>
 
-          <p class="mb-9 max-w-[460px] text-[15px] leading-relaxed text-[#6b8fb5]">
+          <p class="mb-9 max-w-115 text-[15px] leading-relaxed text-[#6b8fb5]">
             An independent, community-maintained reference covering every structure, weapon, mechanic and strategy in Eclipsis. No ads, no outdated entries and no Fandom.
           </p>
 
@@ -45,15 +45,15 @@
       </div>
     </section>
 
-    <div class="mx-auto max-w-[1180px] px-6">
+    <div class="mx-auto max-w-295 px-6">
       <USeparator />
     </div>
 
     <!-- portafab -->
-    <section class="mx-auto max-w-[1180px] px-6 py-16">
+    <section class="mx-auto max-w-295 px-6 py-16">
       <div class="mb-2 flex items-center gap-3">
         <span class="font-mono text-[11px] uppercase tracking-[0.16em] text-primary-400">Portafab Reference</span>
-        <div class="h-px flex-1 bg-gradient-to-r from-[#152848] to-transparent" />
+        <div class="h-px flex-1 bg-linear-to-r from-[#152848] to-transparent" />
       </div>
       <h2 class="font-display mb-2 text-[26px] font-bold uppercase tracking-wider text-[#e2f0ff]">Build Database</h2>
       <p class="mb-8 text-[14px] text-[#6b8fb5]">Every structure available in the Portafab, organized exactly as it appears in game.</p>
@@ -72,15 +72,15 @@
       </div>
     </section>
 
-    <div class="mx-auto max-w-[1180px] px-6">
+    <!-- <div class="mx-auto max-w-295 px-6">
       <USeparator />
-    </div>
+    </div> -->
 
     <!-- mechanics -->
-    <section class="mx-auto max-w-[1180px] px-6 py-16">
+    <!-- <section class="mx-auto max-w-295 px-6 py-16">
       <div class="mb-2 flex items-center gap-3">
         <span class="font-mono text-[11px] uppercase tracking-[0.16em] text-primary-400">Gameplay</span>
-        <div class="h-px flex-1 bg-gradient-to-r from-[#152848] to-transparent" />
+        <div class="h-px flex-1 bg-linear-to-r from-[#152848] to-transparent" />
       </div>
       <h2 class="font-display mb-2 text-[26px] font-bold uppercase tracking-wider text-[#e2f0ff]">Mechanics and Strategies</h2>
       <p class="mb-8 text-[14px] text-[#6b8fb5]">How the game actually works, with links to contributor guides where applicable.</p>
@@ -108,15 +108,15 @@
       </div>
     </section>
 
-    <div class="mx-auto max-w-[1180px] px-6">
+    <div class="mx-auto max-w-295 px-6">
       <USeparator />
-    </div>
+    </div> -->
 
     <!-- feature strip -->
-    <section class="mx-auto max-w-[1180px] px-6 py-16">
+    <section class="mx-auto max-w-295 px-6 py-16">
       <div class="mb-2 flex items-center gap-3">
         <span class="font-mono text-[11px] uppercase tracking-[0.16em] text-primary-400">What is this</span>
-        <div class="h-px flex-1 bg-gradient-to-r from-[#152848] to-transparent" />
+        <div class="h-px flex-1 bg-linear-to-r from-[#152848] to-transparent" />
       </div>
       <h2 class="font-display mb-8 text-[26px] font-bold uppercase tracking-wider text-[#e2f0ff]">More Than a Wiki</h2>
 
@@ -142,20 +142,20 @@
       </div>
     </section>
 
-    <div class="mx-auto max-w-[1180px] px-6">
+    <div class="mx-auto max-w-295 px-6">
       <USeparator />
     </div>
 
     <!-- cta -->
-    <section class="mx-auto max-w-[1180px] px-6 py-16">
+    <section class="mx-auto max-w-295 px-6 py-16">
       <div class="relative overflow-hidden rounded-xl border border-[#152848] bg-[#0d1c35] px-10 py-10">
-        <div class="absolute inset-y-0 left-0 w-[3px] bg-gradient-to-b from-primary-500 to-secondary-500" />
+        <div class="absolute inset-y-0 left-0 w-0.75 bg-linear-to-b from-primary-500 to-secondary-500" />
         <div class="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
           <div>
             <p class="font-display mb-2 text-[22px] font-bold uppercase tracking-wider text-[#e2f0ff]">
               Know Something We Don't?
             </p>
-            <p class="max-w-[440px] text-[13px] leading-relaxed text-[#6b8fb5]">
+            <p class="max-w-110 text-[13px] leading-relaxed text-[#6b8fb5]">
               If you play the game and notice something is wrong or missing you can submit changes directly through GitHub. No complicated process and no account required beyond a GitHub login.
             </p>
           </div>
