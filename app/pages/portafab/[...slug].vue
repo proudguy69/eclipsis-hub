@@ -81,7 +81,7 @@
               color="neutral"
               variant="outline"
               size="xs"
-              :to="`https://github.com/edit/main/content${page.path}.md`"
+              to="https://eh.orangegreencat.com/guides/contributing"
               target="_blank"
               rel="noopener"
               class="w-full justify-center"
