@@ -66,6 +66,4 @@ const props = withDefaults(defineProps<Props>(), {
   fallback_icon: 'lucide:image',
 })
 
-console.log(props.image)
-
 </script>

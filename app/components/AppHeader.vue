@@ -1,15 +1,18 @@
 <template>
   <UHeader>
     <template #title>
-      <NuxtLink to="/" class="flex items-center gap-2.5 no-underline">
-        <div class="flex h-7 w-7 items-center justify-center rounded border border-primary-900 bg-primary-950/40">
-          <img src="/Large_Tank.webp" alt="">
-          <!-- <UIcon name="lucide:droplets" class="text-primary-400 text-sm"/> -->
-        </div>
-        <span class="font-display text-[17px] font-bold uppercase tracking-widest text-[#e2f0ff]">
-          Eclipsis<span class="text-primary-400">Hub</span>
-        </span>
-      </NuxtLink>
+      <ClientOnly>
+        <NuxtLink to="/" class="flex items-center gap-2.5 no-underline">
+          <div class="flex h-7 w-7 items-center justify-center rounded border border-primary-900 bg-primary-950/40">
+            <img src="/Large_Tank.webp" alt="">
+            <!-- <UIcon name="lucide:droplets" class="text-primary-400 text-sm"/> -->
+          </div>
+          <span class="font-display text-[17px] font-bold uppercase tracking-widest text-[#e2f0ff]">
+            Eclipsis<span class="text-primary-400">Hub</span>
+          </span>
+        </NuxtLink>
+      </ClientOnly>
+      
     </template>
 
     <UNavigationMenu :items="nav_items" />
