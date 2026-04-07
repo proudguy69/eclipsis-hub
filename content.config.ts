@@ -12,7 +12,7 @@ export default defineContentConfig({
 
     portafab: defineCollection({
       type: 'page',
-      source: 'portafab/**/*.md',
+      source: 'portafab/**/*.{md,yml}',
       schema: z.object({
         title: z.string(),
         description: z.string().optional(),
@@ -28,7 +28,7 @@ export default defineContentConfig({
 
     weapons: defineCollection({
       type: 'page',
-      source: 'weapons/**/*.md',
+      source: 'weapons/**/*.{md,yml}',
       schema: z.object({
         title: z.string(),
         description: z.string().optional(),
@@ -43,7 +43,7 @@ export default defineContentConfig({
 
     mechanics: defineCollection({
       type: 'page',
-      source: 'mechanics/**/*.md',
+      source: 'mechanics/**/*.{md,yml}',
       schema: z.object({
         title: z.string(),
         description: z.string().optional(),
@@ -57,7 +57,7 @@ export default defineContentConfig({
 
     guides: defineCollection({
       type: 'page',
-      source: 'guides/**/*.md',
+      source: 'guides/**/*.{md,yml}',
       schema: z.object({
         title: z.string(),
         description: z.string().optional(),
@@ -74,7 +74,7 @@ export default defineContentConfig({
 
     blog: defineCollection({
       type: 'page',
-      source: 'blog/**/*.md',
+      source: 'blog/**/*.{md,yml}',
       schema: z.object({
         title: z.string(),
         description: z.string().optional(),

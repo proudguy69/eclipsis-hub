@@ -42,6 +42,10 @@ Its what renders The authors and their profile pictures, the photo on the card e
 
 Okay okay so HOW can you contribute and get access to this? simple.
 
+First authenticate with github [here](https://eh.orangegreencat.com/__nuxt_studio/auth/github)
+
+You do not need to know how github works, just create an account, when you make edits to the site they will be pushed using your github account automatically.
+
 To open studio you press `CTRL` + `.` (or `CMD` if you are on mac, sometimes `Win` on windows!)
 
 If this is your first time opening studio, you will see:
